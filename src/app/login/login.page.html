@@ -1,0 +1,27 @@
+
+<ion-content color="white" padding >
+  
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div class='title'>
+            <label class='title-label'></label>
+          </div>
+          <div class="form-login">
+            <ion-item class='email-input'>
+              <!-- Esses dois inputs, 'senha e matricula' recebem os mesmos nomes das variaveis declaradas no arquivo login.page.ts
+                e o botão quando clicado (click) 'chama' a função login que faz toda a verificação na login.page.ts-->
+              <ion-input [(ngModel)]= 'matricula' type="number" placeholder="Matricula UFFS" ngModel required></ion-input>
+            </ion-item>
+            <ion-item  class='pass-input'>
+              <ion-input [(ngModel)]= 'senha' name="password" type="password" placeholder="Password" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div class="button-submit">
+            <ion-button size="large" type="submit" (click)="login()" expand="block">Login</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
